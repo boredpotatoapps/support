@@ -1,19 +1,38 @@
-# boredpotatoapps
+# boredpotatoapps.github.io
 
-Public hosting for **Bored Potato Apps** — privacy policies and support pages
-referenced by app store listings. This repo is intentionally public so GitHub
-Pages can serve it; the app source repos stay private.
+Public host for **Bored Potato Apps** legal & support pages (privacy policies,
+terms, support) referenced by app-store listings.
 
-## GitHub Pages
+This is the **only public repo** in the org. App source lives in **private**
+repos (`boredpotatoapps/foxriver`, `boredpotatoapps/quackcontrol`, …). Nothing
+here exposes app code — just the store-required public pages.
 
-Served from `main` branch, `/docs` folder (Settings → Pages → Source: `main` `/docs`).
+## How it's served
 
-| Page | Path in repo | Live URL |
-|------|--------------|----------|
-| Fox River — Privacy Policy | `docs/foxriver/privacy.html` | `<pages-root>/foxriver/privacy.html` |
+This repo is named `boredpotatoapps.github.io`, so it's the org's GitHub Pages
+site. Source: **`main` branch, `/docs` folder** (Settings → Pages).
+`/docs` becomes the site root.
 
-`<pages-root>` depends on the repo name:
-- Repo named `boredpotatoapps.github.io` → `https://boredpotatoapps.github.io`
-- Repo named `boredpotatoapps`            → `https://boredpotatoapps.github.io/boredpotatoapps`
+```
+docs/
+  index.html                  -> https://boredpotatoapps.github.io/
+  foxriver/
+    privacy.html              -> https://boredpotatoapps.github.io/foxriver/privacy.html
+  quackcontrol/
+    privacy.html              -> https://boredpotatoapps.github.io/quackcontrol/privacy.html
+```
 
-Use the resulting `…/foxriver/privacy.html` URL in the Google Play store listing.
+## Adding a new app
+
+1. `mkdir docs/<appname>`
+2. Add `docs/<appname>/privacy.html` (copy an existing one, edit the app name/details).
+3. Optionally `terms.html` / `support.html` in the same folder.
+4. Add a link in `docs/index.html`.
+5. Commit + push. Use `https://boredpotatoapps.github.io/<appname>/privacy.html`
+   in that app's Play / App Store listing.
+
+## Apps
+
+| App | Pages | Source repo (private) |
+|-----|-------|-----------------------|
+| Fox River | [privacy](https://boredpotatoapps.github.io/foxriver/privacy.html) | `boredpotatoapps/foxriver` |
