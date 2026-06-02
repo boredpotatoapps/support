@@ -35,3 +35,4 @@ docs/
 | App | Pages | Source repo (private) |
 |-----|-------|-----------------------|
 | Fox River | [privacy](https://boredpotatoapps.github.io/support/foxriver/privacy.html) | `boredpotatoapps/foxriver` |
+| Quack Control | [privacy](https://boredpotatoapps.github.io/support/quackcontrol/privacy.html) | `boredpotatoapps/quackcontrol` |
